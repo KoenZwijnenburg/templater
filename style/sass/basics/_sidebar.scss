@@ -1,0 +1,5 @@
+aside {
+  .blocks {
+    @include block_row(25%, 50%, 10px, 200px);
+  }
+}

@@ -1,0 +1,23 @@
+footer {
+  height:100px;
+  background:#ccc;
+
+  .container {
+    height:100%;
+    @include sidebar(50%, 0);
+
+    .footer-content {
+      height:100%;
+      background-color: green;
+    }
+
+    .sidebar {
+      background-color: blue;
+      height:100%;
+
+      .blocks {
+        @include block_row(20%, 50%, 0, 100%);
+      }
+    }
+  }
+}

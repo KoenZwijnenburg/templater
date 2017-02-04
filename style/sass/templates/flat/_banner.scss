@@ -1,0 +1,26 @@
+.banner {
+  overflow:hidden;
+  position:relative;
+
+  .banner-text {
+    position:absolute;
+    text-transform:uppercase;
+    right: 2.5%;
+    bottom: 50px;
+    font-size:32px;
+    width:425px;
+    color:white;
+    text-shadow: 0 2px 2px #333;
+    line-height:150%;
+    letter-spacing:1px;
+    font-weight:300;
+
+
+    .first {
+      font-size:36px;
+      margin-bottom:0px;
+      color:#222;
+
+    }
+  }
+}

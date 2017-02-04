@@ -1,0 +1,18 @@
+.options {
+  margin: 50px auto;
+
+  .blocks {
+    @include block_row(50%, 25%, 25px, 250px);
+
+    .block {
+      padding:25px;
+      font-size:12px;
+
+      i {
+        margin:15px 0;
+        color:$main-color;
+        font-size:50px;
+      }
+    }
+  }
+}

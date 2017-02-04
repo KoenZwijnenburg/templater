@@ -1,0 +1,145 @@
+$header-height-mobile:150px;
+$logo-height-mobile: $header-height-mobile * 0.5;
+$header-height-screen:100px;
+$logo-height-screen: $header-height-screen * 0.5;
+
+header {
+  background-color: white;
+  height:$header-height-mobile;
+  position:relative;
+
+  &.margin {
+    margin-bottom:50px;
+  }
+
+
+  .header {
+    position:relative;
+
+    .logo {
+      padding-right:75px;
+      width:100%;
+      height: $logo-height-mobile;
+
+      img {
+        margin-top: (($header-height-mobile - $logo-height-mobile) / 2);
+        height: 100%;
+      }
+    }
+
+    .hamburger-menu {
+      float:right;
+      width:50px;
+      height:50px;
+      background:black;
+      position:Absolute;
+      right:0;
+      top: ($header-height-mobile - 50) / 2;
+      text-align:center;
+      padding:10px;
+
+      i {
+        font-size:32px;
+      }
+    }
+
+    nav {
+      position:fixed;
+      top:0;
+      height:100%;
+      padding:$padding;
+      right:0;
+      width:0;
+      background:black;
+      z-index:999;
+      display:none;
+
+      ul {
+        li {
+          position:relative;
+          width:100%;
+          a {
+
+            line-height:2em;
+            border-bottom:1px solid #333;
+            padding-bottom:5px;
+            display:block;
+          }
+
+          i {
+            position:absolute;
+            right: 5px;
+            top:5px;
+          }
+
+          ul {
+            display:none;
+            padding:10px 0;
+
+            li {
+              line-height:2em;
+              padding-left: 10px;
+
+              a {
+                color:#AAA;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  header {
+    height:$header-height-screen;
+
+    .header {
+
+      .logo {
+        height: $logo-height-screen;
+        width:auto;
+
+        img {
+          margin-top: (($header-height-screen - $logo-height-screen) / 2);
+        }
+      }
+
+      .hamburger-menu {
+        display:none
+      }
+
+      nav {
+
+        $_nav-height:50px;
+        background:none;
+        position:absolute;
+        right:0;
+        top: ($header-height-screen - $_nav-height) / 2;
+        height: $_nav-height;
+        padding:0;
+        white-space: nowrap;
+        width: calc(100% - 400px);
+        text-align:right;
+        display:block;
+
+        ul {
+          li {
+            width:auto;
+            display:inline-block;
+
+            a {
+              line-height: $_nav-height;
+              display:inline-block;
+              float:left;
+              padding:0 25px;
+              border:none;
+              color:black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

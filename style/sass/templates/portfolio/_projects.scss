@@ -1,0 +1,41 @@
+.projects {
+  height:300px;
+  margin:50px auto;
+  text-align:center;
+
+  .blocks {
+    @include block_row(50%, 25%, 10px, 190px);
+
+    .block {
+      position:relative;
+
+      .overlay {
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        color:white;
+        background: rgba(0, 0, 200, 0.6);
+        opacity:0;
+        cursor:pointer;
+        transition: opacity 250ms ease-in-out;
+
+        .text {
+          display:inline-block;
+          margin-top:65px;
+          line-height:50px;
+          text-transform:uppercase;
+          letter-spacing:1px;
+        }
+
+        &:hover {
+          opacity:1;
+        }
+      }
+    }
+
+  }
+
+
+}

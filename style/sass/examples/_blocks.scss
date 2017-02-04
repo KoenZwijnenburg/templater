@@ -1,0 +1,7 @@
+.blocks {
+    @include block_row(50%, 25%, 50px, 200px);
+
+  .block {
+    padding:25px;
+  }
+}

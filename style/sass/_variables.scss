@@ -1,0 +1,46 @@
+
+// variables
+
+// global sizes
+$margin:24px;
+$scrollbar:17px;
+$padding: 8px;
+
+$max-width: (1920px - $scrollbar);
+$nineteen-inch: (1672px - $scrollbar);
+$seventeen-inch: (1358px - $scrollbar);
+$fifteen-inch: (1272px - $scrollbar);
+$thirteen-inch: (1024px -$scrollbar);
+$tablet: 768px;
+$mobile: 480px;
+$iphone: 320px;
+
+// usable sizes
+$s1920 : ($max-width - ($margin * 2));
+$s1680 : ($nineteen-inch - ($margin *2));
+$s1366 : ($seventeen-inch - ($margin *2));
+$s1280 : ($fifteen-inch - ($margin *2));
+$s1024 : ($thirteen-inch - ($margin *2));
+
+
+
+//optional sizes
+$sidebar-width: 300px;
+
+
+//font
+$font: Roboto, arial, sans-serif;
+
+// font-sizes
+$font-size: 14px;
+$h1-size: 28px;
+$h2-size: 24px;
+$h3-size: 16px;
+
+// main colors:
+$main-color: #00C8C8;
+$text-color: #222;
+$second-color: #333;
+$call-to-action: red;
+$cancel: #ccc;
+

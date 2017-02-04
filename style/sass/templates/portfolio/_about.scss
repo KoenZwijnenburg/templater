@@ -1,0 +1,28 @@
+.about {
+  background:#00CCCC;
+  padding:50px;
+  color:white;
+  float:left;
+  margin-bottom:100px;
+
+  h2 {
+    border-bottom:1px solid white;
+    margin-bottom:25px;
+    width:300px;
+    padding-bottom:5px;
+  }
+
+
+  img {
+    float:right;
+    margin-left:5%;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+  }
+
+  p {
+    width:50%;
+    float:left;
+  }
+}
