@@ -1,0 +1,65 @@
+.projects {
+  height:auto;
+  margin:75px auto;
+  text-align:center;
+
+  .blocks {
+    @include block_row(50%, 25%, 10px, auto);
+
+    .block {
+      position:relative;
+      text-align:center;
+      border:1px solid #eee;
+      padding:25px;
+
+      i {
+        font-size:100px;
+        color:#ccc;
+      }
+
+      &:nth-child(odd) {
+        i {
+          color: $main-color;
+        }
+      }
+
+
+      .project-text {
+        color:black;
+        margin-top:10px;
+        font-weight:lighter;
+        text-transform:uppercase;
+      }
+
+
+
+      .overlay {
+        position:absolute;
+        bottom:0;
+        left:0;
+        height:100%;
+        width:100%;
+        color:white;
+        background: rgba(0, 0, 200, 0.6);
+        opacity:0;
+        cursor:pointer;
+        transition: opacity 250ms ease-in-out;
+        padding:0;
+
+
+        .text {
+          display:inline-block;
+          margin-top:65px;
+          line-height:50px;
+          text-transform:uppercase;
+          letter-spacing:1px;
+        }
+
+        &:hover {
+          opacity:1;
+        }
+      }
+    }
+
+  }
+}

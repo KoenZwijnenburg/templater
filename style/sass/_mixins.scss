@@ -1,71 +1,91 @@
 @mixin sidebar($_sidebar-width, $_margin) {
-
   position:relative;
 
-  .content {
+  @media screen and (min-width: $tablet) {
+
+    .content {
       display: inline-block;
 
-    @if $_margin > 0 {
-      padding-right: calc(#{$_sidebar-width} + (#{$_margin} * 3));
-    } @else {
-      padding-right: $-sidebar-width;
+      @if $_margin > 0 {
+        padding-right: calc(#{$_sidebar-width} + (#{$_margin} * 3));
+      } @else {
+        padding-right: $-sidebar-width;
+      }
+
     }
 
-  }
+    aside,
+    .sidebar {
+      height: 100%;
+      width: $_sidebar-width;
+      position: absolute;
+      top: 0;
+      right: 0;
 
-  aside,
-  .sidebar {
-    height: 100%;
-    width: $_sidebar-width;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    @if $_margin > 0 {
-      margin-left: $_margin;
+      @if $_margin > 0 {
+        margin-left: $_margin;
+      }
     }
   }
 }
 
 @mixin block_row($_tablet_width, $_screen_width, $_margin, $_height) {
-  @media screen and (min-width: $tablet) {
-    margin-left: -$_margin;
-    margin-right: -$_margin;
-  }
 
-  > div {
+  .block {
     width: 100%;
     height: auto;
     min-height: $_height;
+  }
 
-    @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
+    margin-left: -$_margin;
+    margin-right: -$_margin;
+
+    .block {
+      height: $_height;
+      display: inline-block;
+      float:left;
 
       @if $_margin == 0 {
         width: $_tablet_width;
-        margin:0;
+        margin: 0;
       } @else {
         $_size: $_margin *2;
         width: calc(#{$_tablet_width} - #{$_size});
         margin: 0 $_margin;
       }
-
-      float: left;
-      height: $_height;
-      display: inline-block;
     }
+  }
 
-    @media screen and (min-width: $thirteen-inch) {
+  @media screen and (min-width: $thirteen-inch) {
 
+    .block {
       @if $_margin == 0 {
         width: $_screen_width;
-        margin:0;
+        margin: 0;
 
       } @else {
         $_size: $_margin *2;
         width: calc(#{$_screen_width} - #{$_size});
         margin: 0 $_margin;
       }
-
     }
+
   }
+}
+
+@mixin material-icons() {
+  direction: ltr;
+  display: inline-block;
+  font-family: 'Material Icons';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }

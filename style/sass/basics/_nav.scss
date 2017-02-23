@@ -1,0 +1,97 @@
+.hamburger-menu {
+  color:$main-color;
+  float:right;
+  max-width:100px;
+
+  .material-icons {
+    margin-top: $margin;
+    font-size:50px;
+  }
+
+}
+
+nav {
+  position:fixed;
+  top:0;
+  height:100%;
+  padding:$padding;
+  right:0;
+  background:black;
+  z-index:999;
+  display:none;
+
+  ul {
+    li {
+      position:relative;
+      width:100%;
+      a {
+
+        line-height:2em;
+        border-bottom:1px solid #333;
+        padding-bottom:5px;
+        display:block;
+      }
+
+      i {
+        position:absolute;
+        right: 5px;
+        top:5px;
+      }
+
+      ul {
+        display:none;
+        padding:10px 0;
+
+        li {
+          line-height:2em;
+          padding-left: 10px;
+
+          a {
+            color:#AAA;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+
+  .hamburger-menu {
+    display: none
+  }
+
+  nav {
+    $_nav-height: 50px;
+    position:absolute;
+    right:0;
+    background: none;
+    top: ($header-height-screen - $_nav-height) / 2;
+    height: $_nav-height;
+    padding: 0;
+    white-space: nowrap;
+    display: block;
+
+    ul {
+      li {
+        width: auto;
+        display: inline-block;
+
+        a {
+          line-height: $_nav-height;
+          display: inline-block;
+          float: left;
+          padding: 0 10px;
+          border: none;
+          color: black;
+          text-transform:uppercase;
+          font-weight:lighter;
+
+          &:hover {
+            color:$main-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+aside {
+  float:right;
+
+  ul {
+    li {
+      position:relative;
+      padding-left:25px;
+      border-bottom:1px solid #EEE;
+      padding-bottom:5px;
+      margin-bottom:10px;
+
+      &:before {
+        @include material-icons();
+        content: 'keyboard_arrow_right';
+        position:absolute;
+        left:0;
+        color:#ccc;
+      }
+      a {
+        display:block;
+        color: $main-color;
+      }
+    }
+  }
+
+  .button {
+    width:100%;
+    margin-bottom:10px;
+  }
+}
+
+.uses-sidebar {
+  @include sidebar(250px, 100px);
+}

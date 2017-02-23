@@ -1,0 +1,19 @@
+article {
+
+  &.list {
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 50px;
+    padding-bottom:25px;
+
+    h2 {
+      margin-bottom:5px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .article-list {
+    margin-left: 20%;
+    width: 60%;
+  }
+}

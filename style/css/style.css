@@ -34,97 +34,31 @@ a {
 img {
   max-width: 100%; }
 
+.clear {
+  clear: both; }
+
 .container {
   max-width: 1903px;
   width: 80%;
   margin: auto; }
 
-.main-content .content {
-  margin-bottom: 50px; }
-
-@media screen and (min-width: 1007px) {
-  .main-content {
-    position: relative;
-    min-height: 500px; }
-    .main-content .content {
-      width: 100%;
-      height: 100%; }
-    .main-content.uses-sidebar {
-      position: relative; }
-      .main-content.uses-sidebar .content {
-        display: inline-block;
-        padding-right: calc(300px + (100px * 3)); }
-      .main-content.uses-sidebar aside,
-      .main-content.uses-sidebar .sidebar {
-        height: 100%;
-        width: 300px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-left: 100px; } }
-
-.options {
-  height: 200px; }
-  .options .blocks {
-    text-align: center; }
+.fullwidth {
+  max-width: 1903px;
+  margin: auto; }
 
 header {
   background-color: white;
-  height: 150px;
+  height: 100px;
   position: relative; }
   header.margin {
     margin-bottom: 50px; }
   header .header {
     position: relative; }
     header .header .logo {
-      padding-right: 75px;
-      width: 100%;
-      height: 75px; }
+      max-width: calc(100% - 150px);
+      width: 200px; }
       header .header .logo img {
-        margin-top: 37.5px;
-        height: 100%; }
-    header .header .hamburger-menu {
-      float: right;
-      width: 50px;
-      height: 50px;
-      background: black;
-      position: Absolute;
-      right: 0;
-      top: 50px;
-      text-align: center;
-      padding: 10px; }
-      header .header .hamburger-menu i {
-        font-size: 32px; }
-    header .header nav {
-      position: fixed;
-      top: 0;
-      height: 100%;
-      padding: 8px;
-      right: 0;
-      width: 0;
-      background: black;
-      z-index: 999;
-      display: none; }
-      header .header nav ul li {
-        position: relative;
-        width: 100%; }
-        header .header nav ul li a {
-          line-height: 2em;
-          border-bottom: 1px solid #333;
-          padding-bottom: 5px;
-          display: block; }
-        header .header nav ul li i {
-          position: absolute;
-          right: 5px;
-          top: 5px; }
-        header .header nav ul li ul {
-          display: none;
-          padding: 10px 0; }
-          header .header nav ul li ul li {
-            line-height: 2em;
-            padding-left: 10px; }
-            header .header nav ul li ul li a {
-              color: #AAA; }
+        margin-top: 24px; }
 
 @media screen and (min-width: 768px) {
   header {
@@ -133,100 +67,187 @@ header {
       height: 50px;
       width: auto; }
       header .header .logo img {
-        margin-top: 25px; }
-    header .header .hamburger-menu {
-      display: none; }
-    header .header nav {
-      background: none;
-      position: absolute;
-      right: 0;
-      top: 25px;
-      height: 50px;
-      padding: 0;
-      white-space: nowrap;
-      width: calc(100% - 400px);
-      text-align: right;
-      display: block; }
-      header .header nav ul li {
-        width: auto;
-        display: inline-block; }
-        header .header nav ul li a {
-          line-height: 50px;
-          display: inline-block;
-          float: left;
-          padding: 0 25px;
-          border: none;
-          color: black; } }
+        height: 100%;
+        margin-top: 25px;
+        width: auto; } }
 
-footer {
-  height: 100px;
-  background: #ccc; }
-  footer .container {
-    height: 100%;
-    position: relative; }
-    footer .container .content {
-      display: inline-block;
-      padding-right: 50%; }
-    footer .container aside,
-    footer .container .sidebar {
-      height: 100%;
-      width: 50%;
+.hamburger-menu {
+  color: #00C8C8;
+  float: right;
+  max-width: 100px; }
+  .hamburger-menu .material-icons {
+    margin-top: 24px;
+    font-size: 50px; }
+
+nav {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  padding: 8px;
+  right: 0;
+  background: black;
+  z-index: 999;
+  display: none; }
+  nav ul li {
+    position: relative;
+    width: 100%; }
+    nav ul li a {
+      line-height: 2em;
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
+      display: block; }
+    nav ul li i {
       position: absolute;
-      top: 0;
-      right: 0; }
-    footer .container .footer-content {
-      height: 100%;
-      background-color: green; }
-    footer .container .sidebar {
-      background-color: blue;
-      height: 100%; }
-      @media screen and (min-width: 768px) {
-        footer .container .sidebar .blocks {
-          margin-left: 0;
-          margin-right: 0; } }
-      footer .container .sidebar .blocks > div {
-        width: 100%;
-        height: auto;
-        min-height: 100%; }
-        @media screen and (min-width: 768px) {
-          footer .container .sidebar .blocks > div {
-            width: 20%;
-            margin: 0;
-            float: left;
-            height: 100%;
-            display: inline-block; } }
-        @media screen and (min-width: 1007px) {
-          footer .container .sidebar .blocks > div {
-            width: 50%;
-            margin: 0; } }
+      right: 5px;
+      top: 5px; }
+    nav ul li ul {
+      display: none;
+      padding: 10px 0; }
+      nav ul li ul li {
+        line-height: 2em;
+        padding-left: 10px; }
+        nav ul li ul li a {
+          color: #AAA; }
 
 @media screen and (min-width: 768px) {
-  aside .blocks {
-    margin-left: -10px;
-    margin-right: -10px; } }
+  .hamburger-menu {
+    display: none; }
+  nav {
+    position: absolute;
+    right: 0;
+    background: none;
+    top: 25px;
+    height: 50px;
+    padding: 0;
+    white-space: nowrap;
+    display: block; }
+    nav ul li {
+      width: auto;
+      display: inline-block; }
+      nav ul li a {
+        line-height: 50px;
+        display: inline-block;
+        float: left;
+        padding: 0 10px;
+        border: none;
+        color: black;
+        text-transform: uppercase;
+        font-weight: lighter; }
+        nav ul li a:hover {
+          color: #00C8C8; } }
 
-aside .blocks > div {
-  width: 100%;
-  height: auto;
-  min-height: 200px; }
+footer {
+  background: #ccc;
+  height: auto; }
+  footer .footer-container .logo {
+    padding-top: 24px;
+    margin-bottom: 24px; }
+    footer .footer-container .logo img {
+      width: 75%;
+      margin-left: 12.5%; }
+  footer .footer-container .contact-details {
+    text-align: center;
+    padding-bottom: 24px; }
+
+@media screen and (min-width: 768px) {
+  footer {
+    height: 125px; }
+    footer .footer-container {
+      position: relative;
+      height: 100%; }
+      footer .footer-container .logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        margin: 0;
+        padding: 0; }
+        footer .footer-container .logo img {
+          margin: 0;
+          margin-top: 10%;
+          height: 60%;
+          width: auto; }
+      footer .footer-container .contact-details {
+        text-align: left;
+        position: absolute;
+        right: 0;
+        top: 24px;
+        font-size: 12px;
+        line-height: 125%; }
+        footer .footer-container .contact-details h3 {
+          margin-bottom: 5px; } }
+
+aside ul li {
+  position: relative;
+  padding-left: 25px;
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 5px;
+  margin-bottom: 10px; }
+  aside ul li:before {
+    direction: ltr;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    content: 'keyboard_arrow_right';
+    position: absolute;
+    left: 0;
+    color: #ccc; }
+  aside ul li a {
+    display: block;
+    color: #00C8C8; }
+
+.main-content {
+  position: relative; }
   @media screen and (min-width: 768px) {
-    aside .blocks > div {
-      width: calc(25% - 20px);
-      margin: 0 10px;
-      float: left;
-      height: 200px;
-      display: inline-block; } }
-  @media screen and (min-width: 1007px) {
-    aside .blocks > div {
-      width: calc(50% - 20px);
-      margin: 0 10px; } }
+    .main-content .content {
+      display: inline-block;
+      padding-right: calc(250px + (100px * 3)); }
+    .main-content aside,
+    .main-content .sidebar {
+      height: 100%;
+      width: 250px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-left: 100px; } }
 
 body {
-  font-family: Roboto, arial, sans-serif;
-  line-height: 1.5em; }
+  font-family: Roboto, arial, sans-serif; }
 
 p {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  line-height: 150%; }
+
+.title {
+  margin-bottom: 5px; }
+
+.subtitle {
+  margin-bottom: 24px;
+  font-weight: lighter;
+  font-style: italic; }
+
+h1, h2 {
+  font-weight: 300;
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 28px; }
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px; }
+  h2 .border {
+    padding: 0 25px 5px 25px;
+    border-bottom: 1px solid black; }
 
 .button {
   display: inline-block;
@@ -247,55 +268,63 @@ p {
 .banner {
   position: relative; }
   .banner .banner-text {
-    width: 100%;
     position: absolute;
-    top: 200px;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
     color: white;
-    font-size: 62px;
-    text-align: center; }
+    text-shadow: 2px 2px 2px black; }
+    .banner .banner-text p {
+      margin-bottom: 10px; }
+    .banner .banner-text .button {
+      max-width: 80%;
+      width: 300px; }
 
-h1, h2 {
-  font-weight: 300;
-  text-transform: uppercase; }
-
-h1 {
-  font-size: 28px; }
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 50px; }
-  h2 .border {
-    padding: 0 25px 5px 25px;
-    border-bottom: 1px solid black; }
+@media screen and (min-width: 768px) {
+  .banner {
+    position: relative; }
+    .banner .banner-text {
+      width: 80%;
+      position: absolute;
+      left: 10%;
+      top: 200px;
+      color: white;
+      font-size: 62px; }
+      .banner .banner-text p {
+        margin-bottom: 1em; }
+      .banner .banner-text .button {
+        font-size: 24px; } }
 
 .projects {
-  height: 300px;
+  height: auto;
   margin: 50px auto;
   text-align: center; }
+  .projects .blocks .block {
+    width: 100%;
+    height: auto;
+    min-height: auto; }
   @media screen and (min-width: 768px) {
     .projects .blocks {
       margin-left: -10px;
-      margin-right: -10px; } }
-  .projects .blocks > div {
-    width: 100%;
-    height: auto;
-    min-height: 190px; }
-    @media screen and (min-width: 768px) {
-      .projects .blocks > div {
-        width: calc(50% - 20px);
-        margin: 0 10px;
+      margin-right: -10px; }
+      .projects .blocks .block {
+        height: auto;
+        display: inline-block;
         float: left;
-        height: 190px;
-        display: inline-block; } }
-    @media screen and (min-width: 1007px) {
-      .projects .blocks > div {
-        width: calc(25% - 20px);
+        width: calc(50% - 20px);
         margin: 0 10px; } }
+  @media screen and (min-width: 1007px) {
+    .projects .blocks .block {
+      width: calc(25% - 20px);
+      margin: 0 10px; } }
   .projects .blocks .block {
-    position: relative; }
+    position: relative;
+    line-height: 0; }
     .projects .blocks .block .overlay {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       height: 100%;
       width: 100%;
@@ -303,7 +332,8 @@ h2 {
       background: rgba(0, 0, 200, 0.6);
       opacity: 0;
       cursor: pointer;
-      transition: opacity 250ms ease-in-out; }
+      transition: opacity 250ms ease-in-out;
+      padding: 0; }
       .projects .blocks .block .overlay .text {
         display: inline-block;
         margin-top: 65px;
@@ -315,21 +345,19 @@ h2 {
 
 .about {
   background: #00CCCC;
-  padding: 50px;
+  padding: 50px 0;
   color: white;
-  float: left;
   margin-bottom: 100px; }
-  .about h2 {
-    border-bottom: 1px solid white;
-    margin-bottom: 25px;
-    width: 300px;
-    padding-bottom: 5px; }
-  .about img {
+  .about .about-container img {
+    margin-bottom: 24px; }
+
+@media screen and (min-width: 768px) {
+  .about .about-container img {
     float: right;
     margin-left: 5%;
     width: 350px;
     height: 350px;
-    border-radius: 50%; }
-  .about p {
-    width: 50%;
-    float: left; }
+    border-radius: 50%;
+    margin-bottom: 0; }
+  .about .about-container p {
+    width: 50%; } }

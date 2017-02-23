@@ -1,37 +1,35 @@
+html,
+body {
+  height:100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+}
+
+
 .container {
   max-width:$max-width;
   width: 80%;
   margin:auto;
 }
 
-
-.main-content {
-  .content {
-    margin-bottom:50px;
-  }
+.fullwidth {
+  max-width:$max-width;
+  margin:auto;
 }
 
 
-@media screen and (min-width: $thirteen-inch) {
-
-  .main-content {
-    position: relative;
-    min-height: 500px;
-
-    .content {
-      width: 100%;
-      height: 100%;
-    }
-
-    &.uses-sidebar {
-      @include sidebar($sidebar-width, 100px);
-    }
-  }
+.alignleft,
+.align-left {
+  float:left;
+  margin-right: $margin;
 }
 
-.options {
-  height:200px;
-  .blocks {
-    text-align:center;
-  }
+.alignright,
+.align-right {
+  float:right;
+  margin-left:$margin;
 }
+

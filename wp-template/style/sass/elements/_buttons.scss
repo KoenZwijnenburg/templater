@@ -1,0 +1,48 @@
+.button {
+  display:inline-block;
+  padding: 0 20px;
+  line-height:40px;
+  border:none;
+  background: $main-color;
+  color:white;
+  text-transform:uppercase;
+  font-size: $font-size;
+  position:relative;
+
+  &:hover {
+    background: $second-color;
+  }
+
+  &.action {
+    background:$call-to-action;
+    &:hover {
+      background: $second-color;
+    }
+  }
+
+  &.second {
+    background:$second-color;
+
+    &:hover {
+      background:$main-color;
+    }
+  }
+
+  &.transparant {
+    background:none;
+    border:2px solid $call-to-action;
+    color: $call-to-action;
+
+    &.inverted {
+      color: white;
+      border: 2px solid white;
+    }
+  }
+
+  i {
+    position:absolute;
+    right: 5px;
+    top:7px;
+  }
+
+}

@@ -1,0 +1,42 @@
+body {
+  font-family: $font;
+}
+
+p {
+  margin-bottom:1em;
+  line-height:150%;
+}
+
+
+.title {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  margin-bottom: $margin;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+h1,h2 {
+  font-weight:300;
+  text-transform:uppercase;
+  color:$main-color;
+}
+
+h1 {
+  font-size:28px;
+  margin-bottom:$margin;
+}
+
+h2 {
+  font-size:24px;
+  margin-bottom:10px;
+
+  .border {
+    padding: 0 25px 5px 25px;
+    border-bottom:1px solid black;
+  }
+}
+
+
